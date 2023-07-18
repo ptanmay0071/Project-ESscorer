@@ -1,0 +1,494 @@
+<body>
+
+<style>
+.body {
+ 
+ width:100%;
+}
+import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+
+.{
+    
+}
+.dropbtn {
+    background-color: red;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: ;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100p%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+.h{
+maxlength:6;
+}
+
+.wrapper {
+    font-family: 'Orbitron', sans-serif;
+    background-color: grey;
+    color: white;
+    border: solid black .5px;
+    
+    border-radius: 5px;
+    height: 70px;
+    outline: black;
+    margin:30px;
+     text-align:center;
+    text:30px;
+   
+    border-radius:50px;
+    padding:10px;
+    
+    
+}
+
+input:active[type=button] {
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+
+input[type=button] {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #64278f;
+    color: white;
+    border: solid black 0.5px;
+    width: 25%;
+    border-radius: 10px;
+    height: 50px;
+    outline: black;
+    margin:5px;
+    text-align:center;
+}
+input:active[type=button] {
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.wrapper span{
+
+  
+  text-align: center;
+  font-size: 60px;
+  font-weight: 800;
+
+  user-select: none;
+  
+}
+.button__wrapper{
+width:100%;
+text-align:center;}
+</style>
+<br>
+
+ 
+  
+  
+ 
+  
+  
+<div class="wrapper">
+ <span id="counter">0</span><span>&#47;<span><span class="num">0</span>
+ 
+  </div>
+  
+</div>
+   
+ 
+  
+   
+   
+
+
+<input id="number" disabled value="0"/>
+       <span id="counting" value="0"></span>        
+
+</div>
+ 
+ 
+
+<br>
+ 
+
+<div class="button__wrapper" >
+
+    <input type="button" id="button__1" value="1" onclick="myFunction1();incrementValue1();increment();" /></a> </td>
+    
+    <input type="button" id="button__2" value="2" onclick="myFunction2();incrementValue2();increment()" /></a> </td>
+    
+    
+    <td> <input type="button" id="button__3" value="0
+    " onclick="myFunction3();incrementValue3();increment()" /> </td>
+    
+    
+    <input type="button" id="button__4" value="4" onclick="myFunction4();incrementValue4();increment()" /> </td>
+    
+    <input type="button" id="button__6" value="6" onclick="myFunction6();incrementValue6();increment()" /> </td>
+    
+    
+    <td> <input type="button" id="button__wide" value="wide" onclick="myFunction5()" /> </td>
+    
+    <td> <input type="button" id="button__noball" value="NoBall+" onclick="myFunctionnoball();increment()" /> </td>
+    <td> <input type="button" id="button__p" value="new over" onclick="myFunctionxyz();" /> </td>  
+    <script>
+    function myFunctionxyz() {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "text");
+    x.setAttribute("value", "Bowler name");
+    document.body.appendChild(x);
+    }
+    </script>
+    
+
+
+<button id="myBtn" class="dropbtn" >wicket</button>
+  <div id="myDropdown" class="dropdown-content">
+   <input type="button" id="button__lbw" value="LBW" onclick="myFunctionlbw();increment();chip_amnt(this)" /> 
+     <input type="button" id="button__catch" value="catch" onclick="myFunctioncatch();increment()" /> 
+    <input type="button" id="button__bold" value="bold" onclick="myFunctionbold();increment()" /> 
+  
+   
+  </div>
+</div>
+
+  
+  </div>
+  
+</br>
+
+<ol>
+
+
+
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script>
+  
+  
+  
+var data = 0; 
+document.getElementById("counting").innerText = data; 
+function increment() { 
+
+    data = data + 1; 
+document.getElementById("counting").innerText = data; 
+} 
+
+ 
+  
+  
+  
+    document.getElementById("myBtn").onclick = function() {myFunction()};
+  
+   function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+   window.onclick = function(event) {
+  
+  if (!event.target.matches('.dropbtn')) {
+  
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  
+  for (let i = 0; i < dropdowns.length; i++) {
+  var openDropdown = dropdowns[i];
+  if (openDropdown.classList.contains('show')) {
+  openDropdown.classList.remove('show');
+  }
+  }
+  }
+  }
+  
+  
+  
+  
+  
+  
+  
+  const plus = document.querySelector(".dropdown-content"),
+  
+  num = document.querySelector(".num");
+  let a = 0;
+  plus.addEventListener("click", ()=>{
+  a++ ;
+  a = (a < 1) ? "0" + a : a;
+  num.innerText = a;
+  });
+  
+  </script>
+  
+  
+  
+  
+  
+  
+  <script>
+ let Btn6 = document.getElementById("button__6");
+  let Btn4= document.getElementById("button__4");
+  let Btn1= document.getElementById("button__1");
+  let Btn2 = document.getElementById("button__2");
+  let Btnwide = document.getElementById("button__wide");
+ let Btnnoball = document.getElementById("button__noball");
+ 
+  let counter = document.getElementById("counter");
+  let count = 0;
+  
+  
+  
+  Btn6.addEventListener("click", () => {
+  count+=6;
+  counter.innerHTML = count;
+  counterStyle();
+  });
+  
+ Btn4.addEventListener("click", () => {
+ count+=4;
+ counter.innerHTML = count;
+ counterStyle();
+ });
+ 
+ Btn1.addEventListener("click", () => {
+  count+=1;
+  counter.innerHTML = count;
+  counterStyle();
+  });
+  Btn2.addEventListener("click", () => {
+  count+=2;
+  counter.innerHTML = count;
+  counterStyle();
+  });
+  
+  Btnwide.addEventListener("click", () => {
+  count+=1;
+  counter.innerHTML = count;
+  counterStyle();
+  });
+
+Btnnoball.addEventListener("click", () => {
+  count+=1;
+  counter .innerHTML = count;
+  counterStyle();
+ 
+  });
+  
+
+
+function myFunction3() {
+  var h = document.createElement("h");
+  var t = document.createTextNode("0,");
+  h.appendChild(t);
+  document.body.appendChild(h);
+   }
+
+function myFunctionnoball() {
+  var h = document.createElement("h");
+  var t = document.createTextNode("NB1+");
+  h.appendChild(t);
+  document.body.appendChild(h);
+   }
+  
+
+  function myFunction6() {
+  
+        var h = document.createElement("h");
+        var t = document.createTextNode("6,");
+        h.appendChild(t);
+        document.body.appendChild(h);
+        
+         }
+  
+  
+  function myFunction4() {
+  var h = document.createElement("h");
+  var t = document.createTextNode("4,");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  
+  function myFunction1() {
+  var h = document.createElement("h");
+  var t = document.createTextNode("1,");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  function myFunction2() {
+  var h = document.createElement("h");
+  var t = document.createTextNode("2,");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  
+  
+  
+  function myFunction5() {
+  var h = document.createElement("h");
+  var t = document.createTextNode("wideball+");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+ 
+  
+  function myFunction11() {
+  var h = document.createElement("h)");
+  var t = document.createTextNode("");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  
+  
+  function myFunctionlbw() {
+  var h = document.createElement("h");
+  var t = document.createTextNode("w-LBW,");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  function myFunctioncatch() {
+  var h = document.createElement("h");
+  var t = document.createTextNode("W-catch,");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  function myFunctionbold() {
+  var h = document.createElement("h");
+  var t = document.createTextNode("w-bold,");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  
+  
+  
+  
+  function myFunctionp() {
+  var h = document.createElement("p");
+  var t = document.createTextNode("");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  </script>
+  
+  
+
+ 
+  <p1
+  > </p1>
+ 
+  
+  
+ 
+  <script>
+  function incrementValue1()
+  {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value+=1;
+  document.getElementById('number').value = value;
+  }
+  function incrementValue2()
+  {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value+=2;
+  document.getElementById('number').value = value;
+  }
+  function incrementValue3()
+  {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value+=0;
+  document.getElementById('number').value = value;
+  }
+  function incrementValue4()
+  {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value+=4;
+  document.getElementById('number').value = value;
+  }
+  function incrementValue5()
+  {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value+=5;
+  document.getElementById('number').value = value;
+  }
+  function incrementValue6()
+  {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value+=6;
+  document.getElementById('number').value = value;
+  }
+  
+  
+  </script>
+  
+  <script>
+ 
+  
+  
+  </script>
+  
+
+ 
+ 
+ 
+ 

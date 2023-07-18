@@ -1,0 +1,249 @@
+<script type="text/javascript">
+function swapDiv(event, elem) {
+elem.parentNode.insertBefore(elem, elem.parentNode.firstChild);
+}
+</script>
+
+
+<div id="container">
+<div onclick="swapDiv(event,this);">chinmay <button onclick="chip_provide(this);">
+ 0
+ </button>
+ <input type="number" disabled id="" value="0"></input>
+ </div>
+ <br>
+ 
+<div onclick="swapDiv(event,this);">tanmay<button onclick="chip_provide(this);">
+ 0
+ </button>
+ <input type="number" disabled id="" value="0"></input>
+ </div>
+ <hr>
+<div onclick="swapDiv(event,this);">nishant<button onclick="chip_provide(this);">
+ 0
+ </button>
+ <input type="number" disabled id="" value="0"></input>
+ </div>
+ <div onclick="swapDiv(event,this);">shahid <button onclick="chip_provide(this);">
+ 0
+ </button>
+ <input type="number" disabled id="" value="0"></input>
+ </div>
+ 
+ <div onclick="swapDiv(event,this);">om <button onclick="chip_provide(this);">
+ 0
+ </button>
+ <input type="number" disabled id="" value="0"></input>
+ </div>
+ 
+ <div onclick="swapDiv(event,this);">Aryan <button onclick="chip_provide(this);">
+ 0
+ </button>
+ <input type="number" disabled id="" value="0"></input>
+ </div>
+</div>
+
+
+
+
+<br>
+<input type="text" id="myText" value="Mickey">
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+
+
+<script>
+
+
+function myFunction() {
+var x = document.getElementById("myText").value;
+document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+
+
+  <body>
+    <label> Name : </label>
+ <input type="Your Name" name="name" id="name" value="Your Name">
+<button type="button" name="button" onclick="printname()">Click here</button>
+ <label id="printHello"></label>
+ <script>function printname(){
+ var giveName = document.getElementById("name").value;
+ document.getElementById("printHello").innerHTML =  giveName;
+ }</script>
+  </body>
+</html>
+
+
+
+
+
+<td> <input type="button" id="button__p" value="new over" onclick="myFunctionp();" /> </td>  
+    
+<br>
+<input type="text" id="message" value="">
+<br>
+<button id="myButton" type="button">Generate Text</button>
+
+<script type="text/javascript">var message = document.getElementById("message");
+document.getElementById("myButton").addEventListener("click", function() {
+    console.log( message.value );
+});</script>
+
+
+   
+        
+
+
+ 
+
+<button onclick="myFunction()">Try it</button>
+ 
+<script>
+function myFunction() {
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "text");
+  x.setAttribute("value", "Hello World!");
+  document.body.appendChild(x);
+}
+</script>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html> 
+
+<html> 
+
+  
+
+<head> 
+
+    <script src= 
+
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"> 
+
+    </script> 
+
+</head> 
+
+  
+
+<body style="text-align: center;  
+
+    border:2px solid green; 
+
+    min-height:240px;"> 
+
+  
+
+    <h1 style="color:green;"> 
+
+        
+
+    </h1> 
+
+      
+
+    <button id="update"> 
+
+        update me 
+
+    </button> 
+
+      
+
+    <div style="margin-top:50px;"> 
+
+        <button id="change"> 
+
+            click me 
+
+        </button> 
+
+    </div> 
+
+  
+
+    <script> 
+
+        $('#change').on('click', function () { 
+
+            $('#update').prop('disabled', true); 
+
+        } 
+
+        ); 
+
+        $('#change').on('dblclick', function () { 
+
+            $('#update').prop('disabled', false); 
+
+        }); 
+
+    </script> 
+
+</body> 
+
+
+
+
+
+
+<div class="container">
+ 
+  <button id="count3">0</button>
+  <button id="my-button2">+</button>
+</div>
+<script type="text/javascript">
+var button2 = document.getElementById('my-button2');
+var display = document.getElementById('count3');
+var count = 0;
+
+button2.addEventListener('dblclick', function() {
+  count++
+  display.innerHTML = count; 
+});
+
+</script>
+
+
+
+<fieldset id="fields-list">
+<div class="pure-g entry">
+    <div class="pure-u-1-5">
+        <input type="text" class="pure-input-1" id="input-1" name="input-1">
+   
+    <div onclick="swapDiv(event,this);"><button onclick="chip_provide(this);">
+    0
+    </button>
+    <input type="number" disabled id="" value="0"></input>
+    </div>
+   
+</fieldset>
+<button id="add">Add</button>
+<script type="text/javascript">
+
+$(document).ready(function ()
+{
+    $("#add").click(function ()
+    {
+        $(".entry:first").clone(false).appendTo("#fields-list");
+    });
+});
+
+
+function swapDiv(event, elem) {
+elem.parentNode.insertBefore(elem, elem.parentNode.firstChild);
+}
+
+</script>
+
+
+

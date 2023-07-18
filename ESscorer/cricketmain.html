@@ -1,0 +1,864 @@
+
+
+<body>
+
+<style>
+
+/*bottom navbar*/
+.btn3
+{border-radius:20px;
+width:50px;
+height:50px;
+background-color: blue;
+font-color:white;
+font-family: 'Orbitron', sans-serif;
+  background-color:skyblue;
+  color: white;
+  border: solid black 0.5px;
+  width: 15%;
+  border-radius: 10px;
+  height: 50px;
+  outline: black;
+  margin:5px;
+  text-align:center;
+}
+
+.btn{
+border-radius:20px;
+width:20px;
+height:60px;
+background-color:purple;
+font-color:white;
+font-family: 'Orbitron', sans-serif;
+  background-color: #64278f;
+  color: white;
+  border: solid black 0.5px;
+  width: 15%;
+  border-radius: 10px;
+  height: 50px;
+  outline: black;
+  margin:5px;
+  text-align:center;
+}
+.btn2{
+border-radius:20px;
+width:25px;
+height:25px;
+background-color:skyblue;
+font-color:white;
+font-family: 'Orbitron', sans-serif;
+  background-color: skyblue;
+  color: white;
+  border: solid black 0.5px;
+  width: 30px;
+  border-radius: 10px;
+  height: 30px;
+  outline: black;
+  margin:5px;
+  text-align:center;
+
+}
+.btnw{border-radius:20px;
+width:50px;
+height:50px;
+background-color:red;
+font-color:whit;
+font-family: 'Orbitron', sans-serif;
+  background-color: red;
+  color: white;
+  border: solid black 0.5px;
+  width: 25%;
+  border-radius: 10px;
+  height: 50px;
+  outline: black;
+  margin:5px;
+  text-align:center;
+}
+
+body {
+    margin: 0 0 55px 0;
+}
+
+.nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    display: flex;
+    overflow-x: auto;
+}
+
+.nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #444444;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+    background-color: #eeeeee;
+}
+
+.nav__link--active {
+    color: #009578;
+}
+
+.nav__icon {
+    font-size: 18px;
+}
+
+ 
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  background-color:white;
+  background-color: ;
+  overflow-y: hidden;
+  transition: 0.6s;
+  
+}
+
+.overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ 
+
+  body {font-family: Arial;}
+  
+  /* Style the tab */
+  .tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  border-radius:50px;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+  background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+  background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+  display: none;
+  padding: 6px 12px;
+ 
+  border-top: none;
+  }
+  
+  
+  
+
+p {
+  cursor: pointer;
+}
+
+.collapsed {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.body {
+ 
+ width:100%;
+}
+import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+
+.{
+    
+}
+ {
+ 
+}
+.h{
+maxlength:6;
+}
+
+.wrapper {
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgb(247, 248, 245);
+    color: white;
+    border: solid black .5px;
+    
+    border-radius: 5px;
+    height: 70px;
+    outline: black;
+    margin:30px;
+     text-align:center;
+    text:30px;
+   
+    border-radius:50px;
+    padding:10px;
+    
+    
+}
+
+input:active[type=button] {
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+
+input[type=button] {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #64278f;
+    color: white;
+    border: solid black 0.5px;
+    width: 25%;
+    border-radius: 10px;
+    height: 50px;
+    outline: black;
+    margin:5px;
+    text-align:center;
+}
+input:active[type=button] {
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+    box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+.wrapper span{
+
+  
+  text-align: center;
+  font-size: 60px;
+  font-weight: 800;
+
+  user-select: none;
+  
+}
+.button__wrapper{
+width:100%;
+text-align:center;}
+.abc{text-align: center;
+top:1px;}
+</style>
+
+
+<br>
+
+ 
+   
+ <h1 class="abc" >Cricket Scoring card</h1>
+<div class="wrapper">
+<span style="font-size:50px;color:orange;" id="printHello"></span> 
+<span > &#160;</span>
+ <span style="font-size:50px;color:rgb(14, 13, 13);" id="counter">0</span><span style="font-size:50px;color:rgb(14, 13, 13);">&#47;<span style="font-size:50px;color:rgb(14, 13, 13);" id="counting"  value="hide" ></span>        
+ <span style="font-size:50px;color:rgb(14, 13, 13);" id="number"  value="" </span>
+  </span>
+  </div>
+ 
+ 
+  <script>function printname(){
+  var giveName = document.getElementById("name").value;
+  document.getElementById("printHello").innerHTML =  giveName;
+  }</script>
+  
+  
+
+ 
+ 
+ 
+ 
+ 
+ 
+ </button>
+ 
+ <div class="button__wrapper" >
+ <input type="Your Name" name="name" id="name" value="">
+  <button type="button" class="btn3" name="button" onclick="printname()">Team </button>
+  <br>
+
+ <input type="button" id="button__1" value="1" onclick="openNav();" onclick="myFunction1();incrementValue1();myFunctionshow();openNav();" /></a> </td>
+ 
+ <input type="button" id="button__2" value="2" onclick="openNav();" onclick="myFunction2();incrementValue2();myFunctionshoww();" /></a> </td>
+ 
+ 
+ 
+ <input type="button" id="button__4" value="4" onclick="openNav();" onclick="myFunction4();incrementValue4();myFunctionshowww()" /> </td>
+ 
+ <input type="button" id="button__6" value="6" onclick="openNav();" onclick="myFunction6();incrementValue6();myFunctionshoe()" /> </td>
+ 
+ 
+ <td> <input type="button" id="button__wide" value="wide"  onclick="myFunction5()" /> </td>
+ 
+ <td> <input type="button" id="button__noball" value="NoBall+" onclick="myFunctionnoball();" /> </td>
+<br>
+ <td> <input type="button" id="buttonw" class="btnw" value="wicket" style="background-color:red;" onclick="increment();" /> </td>  
+ <br>
+ 
+ <input type="button" id="button__lbw" value="LBW" onclick="myFunctionlbw();increment();" /> 
+ <input type="button" id="button__catch" value="catch" onclick="myFunctioncatch();increment()" /> 
+ <input type="button" id="button__bold" value="bold" onclick="myFunctionbold();increment()" /> 
+ <br><td> <input type="button" id="button__p" value="new over" style="background-color:blue;" onclick="myFunctionxyz();" /> </td>  
+ <br>
+ 
+ 
+ <hr>
+ <a href="cricketmain2.html"><button class="btn3">Next Inning</button></a>
+ 
+ <h2 class="abc">Comentry</h2>
+ <hr>
+ <script>
+ function myFunctionxyz() {
+ var x = document.createElement("input");
+ 
+ 
+ x.setAttribute("type", "text");
+ x.setAttribute("value", "Bowler name");
+ document.body.appendChild(x);
+ }
+ </script>
+ 
+ 
+  </div>
+ 
+ <script>
+ function myFunction() {
+ document.getElementById("myNumber").stepUp(5);
+ }
+ </script>
+ 
+ 
+
+ </div>
+ 
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <nav class="nav">
+ <a href="#" class="nav__link nav__link--active">
+ <i class="material-icons nav__icon"></i>
+ <span class="nav__text"></span>
+ </a>
+ <a href="#" class="nav__link">
+ 
+ <i class="material-icons nav__icon" onclick="openNav();"></i>
+ <span class="nav__text"></span>
+ <a href="#" class="nav__link">
+ <i class="material-icons nav__icon"></i>
+ <span class="nav__text"></span>
+ </a>
+ <a href="#" class="nav__link">
+ <i class="material-icons nav__icon"></i>
+ <span class="nav__text"></span>
+ </a>
+ </nav>
+ 
+ <div id="myNav" class="overlay">
+ 
+ <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ <div class="overlay-content">
+ 
+ <button class="btn" id="one" onclick="chip_amnt(this);myFunction1();">1</button>
+ <button class="btn" onclick="chip_amnt(this);myFunction2()">2</button>
+ <button class="btn" onclick="chip_amnt(this);myFunction4()">4</button>
+ <button class="btn" onclick="chip_amnt(this);myFunction6()">6</button>
+ 
+ <hr>
+ 
+ <div  onclick="swapDiv(event,this);"><input type="text" id="fname" name="fname"> <button class="btn2" onclick="chip_provide(this);buttonClick();closeNav()">
+ 0
+ </button><input type="button" style="width:20px;height:20px;" id="hii" value="0"></button>
+</div>
+<div  onclick="swapDiv(event,this);"><input type="text" id="fname" name="fname"> <button class="btn2" onclick="chip_provide(this);buttonClickk()">
+ 0
+ </button><input type="button" style="width:20px;height:20px;" id="hi" value="0"></button>
+ </div>
+<div  onclick="swapDiv(event,this);"><input type="text" id="fname" name="fname"> <button class="btn2" onclick="chip_provide(this);buttonClickkk()">
+ 0
+ </button><input type="button" style="width:20px;height:20px;" id="hiii" value="0"></button>
+ </div>
+<div  onclick="swapDiv(event,this);"><input  type="text" id="fname" name="fname"> <button class="btn2" onclick="chip_provide(this);buttonClickkkk();closeNav()">
+ 0
+ </button><input type="button" style="width:20px;height:20px;"  id="hiiiii" value="0"></button>
+ </div>
+<div  onclick="swapDiv(event,this);"><input type="text" id="fname" name="fname"> <button class="btn2" onclick="chip_provide(this);buttonClickkkkk()">
+ 0
+ </button><input type="button"style="width:20px;height:20px;"  id="hiiiiii" value="0"></button>
+ </div>
+<div  onclick="swapDiv(event,this);"><input type="text" id="fname" name="fname"> <button class="btn2"  onclick="chip_provide(this);buttonClickkkkkk()">
+ 0 </button><input type="button" style="width:20px;height:20px;"  id="hiiii" value="0"></button>
+ </div>
+<div  onclick="swapDiv(event,this);"><input type="text" id="fname" name="fname"> <button class="btn2" onclick="chip_provide(this);buttonClickkkkkkk()">
+ 0
+ </button><input type="button" style="width:20px;height:20px;"  id="hi" value="0"></button>
+ 
+ 
+</div><div  onclick="swapDiv(event,this);"><input type="text" id="fname" name="fname"> <button class="btn2" onclick="chip_provide(this);buttonClickkkkkkkk()">
+ 0
+ </button><input type="button" style="width:20px;height:20px;" id="hi" value="0"></button>
+ 
+</div><div  onclick="swapDiv(event,this);"><input type="text" id="fname" name="fname"> <button class="btn2" onclick="chip_provide(this);buttonClickkkkkkkkk">
+ 0
+ </button><input type="button" style="width:20px;height:20px;" id="hi" value="0"></button>
+ 
+</div><div  onclick="swapDiv(event,this);"><input type="text" id="fname" name="fname"> <button class="btn2" onclick="chip_provide(this);buttonClick()">
+ 0
+ </button><input type="button" style="width:20px;height:20px;" id="hi" value="0"></button>
+</div>
+ <div  onclick="swapDiv(event,this);"><input type="text" id="fname" name="fname"> <button class="btn2" onclick="chip_provide(this);buttonClick()">
+ 0
+ </button><input type="button" style="width:20px;height:20px;" id="hi" value="0"></button>
+ 
+ </div>
+  </div>
+ </div>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script>
+ function openNav() {
+ document.getElementById("myNav").style.height = "100%";
+ }
+ 
+ function closeNav() {
+ document.getElementById("myNav").style.height = "0%";
+ }
+ </script>
+ 
+ 
+ 
+ <script>
+
+ var a = 0;
+ function buttonClickk() {
+ document.getElementById('hi').value = a+=1;
+ }
+ var b = 0;
+ function buttonClick() {
+ document.getElementById('hii').value = b+=1;
+ }
+ 
+ var c = 0;
+ function buttonClickkk() {
+ document.getElementById('hiii').value = c+=1;
+ }
+ 
+ var d= 0;
+ function buttonClickkkk() {
+ document.getElementById('hiiii').value = d+=1;
+ }
+ var e= 0;
+ function buttonClickkkk() {
+ document.getElementById('hiiiii').value = e+=1;
+ }
+ var f= 0;
+ function buttonClickkkk() {
+ document.getElementById('hiiiiii').value = f+=1;
+ }
+ 
+ </script>
+ 
+
+
+  
+  
+  
+ <script>
+  
+  
+  
+var data = 0; 
+document.getElementById("counting").innerText = data; 
+function increment() { 
+
+    data = data + 1; 
+document.getElementById("counting").innerText = data; 
+} 
+ 
+  
+  </script>
+ 
+  
+  <script>
+ let Btn6 = document.getElementById("button__6");
+  let Btn4= document.getElementById("button__4");
+  let Btn1= document.getElementById("one");
+  let Btn2 = document.getElementById("button__2");
+  let Btnwide = document.getElementById("button__wide");
+ let Btnnoball = document.getElementById("button__noball");
+ 
+  let counter = document.getElementById("counter");
+  let count = 0;
+  
+  
+  
+  Btn6.addEventListener("click", () => {
+  count+=6;
+  counter.innerHTML = count;
+  counterStyle();
+  });
+  
+ Btn4.addEventListener("click", () => {
+ count+=4;
+ counter.innerHTML = count;
+ counterStyle();
+ });
+ 
+ Btn1.addEventListener("click", () => {
+  count+=1;
+  counter.innerHTML = count;
+  counterStyle();
+  });
+  Btn2.addEventListener("click", () => {
+  count+=2;
+  counter.innerHTML = count;
+  counterStyle();
+  });
+  
+  Btnwide.addEventListener("click", () => {
+  count+=1;
+  counter.innerHTML = count;
+  counterStyle();
+  });
+
+Btnnoball.addEventListener("click", () => {
+  count+=1;
+  counter .innerHTML = count;
+  counterStyle();
+ 
+  });
+  
+
+
+function myFunction3() {
+  var h = document.createElement("button");
+  var t = document.createTextNode("0,");
+  h.appendChild(t);
+  document.body.appendChild(h);
+   }
+
+function myFunctionnoball() {
+  var h = document.createElement("button");
+  var t = document.createTextNode("NB1+");
+  h.appendChild(t);
+  document.body.appendChild(h);
+   }
+  
+
+  function myFunction6() {
+  
+        var h = document.createElement("button");
+        var t = document.createTextNode("6,");
+        h.appendChild(t);
+        document.body.appendChild(h);
+        
+         }
+  
+  
+  function myFunction4() {
+  var h = document.createElement("button");
+  var t = document.createTextNode("4,");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  
+  function myFunction1() {
+  var h = document.createElement("button");
+  var t = document.createTextNode("1,");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  function myFunction2() {
+  var h = document.createElement("button");
+  var t = document.createTextNode("2,");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  
+  
+  
+  function myFunction5() {
+  var h = document.createElement("button");
+  var t = document.createTextNode("wideball+");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+ 
+  
+  function myFunction11() {
+  var h = document.createElement("button)");
+  var t = document.createTextNode("");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  
+  
+  function myFunctionlbw() {
+  var h = document.createElement("button");
+  var t = document.createTextNode("w-LBW,");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  function myFunctioncatch() {
+  var h = document.createElement("button");
+  var t = document.createTextNode("W-catch,");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  function myFunctionbold() {
+  var h = document.createElement("button");
+  var t = document.createTextNode("w-bold,");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  
+  
+  
+  
+  function myFunctionp() {
+  var h = document.createElement("p");
+  var t = document.createTextNode("");
+  h.appendChild(t);
+  document.body.appendChild(h);
+  }
+  </script>
+  
+  
+
+ 
+  <p1
+  > </p1>
+ 
+  
+  
+ 
+  <script>
+  function incrementValue1()
+  {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value+=1;
+  document.getElementById('number').value = value;
+  }
+  function incrementValue2()
+  {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value+=2;
+  document.getElementById('number').value = value;
+  }
+  function incrementValue3()
+  {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value+=0;
+  document.getElementById('number').value = value;
+  }
+  function incrementValue4()
+  {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value+=4;
+  document.getElementById('number').value = value;
+  }
+  function incrementValue5()
+  {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value+=5;
+  document.getElementById('number').value = value;
+  }
+  function incrementValue6()
+  {
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value+=6;
+  document.getElementById('number').value = value;
+  }
+  
+  
+  </script>
+  
+  
+  <script type="text/javascript">var tmp=0;
+  
+  function chip_amnt(o){
+  tmp = Number(o.innerText);
+  }
+  
+  function chip_provide(o){
+  var value = (Number(o.innerHTML) || 0) + (tmp || 0);
+  
+  value && (o.innerHTML = value);
+  
+  }</script>
+  
+  
+ 
+  
+  </div>
+  </div>
+  
+  
+
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script>
+  
+  
+  
+  var data = 0; 
+  document.getElementById("counting").innerText = data; 
+  function increment() { 
+  
+  data = data + 1; 
+  document.getElementById("counting").innerText = data; 
+  } 
+  
+  
+  
+  
+  
+  document.getElementById("myBtn").onclick = function() {myFunction()};
+  
+  function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  window.onclick = function(event) {
+  
+  if (!event.target.matches('.dropbtn')) {
+  
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  
+  for (let i = 0; i < dropdowns.length; i++) {
+  var openDropdown = dropdowns[i];
+  if (openDropdown.classList.contains('show')) {
+  openDropdown.classList.remove('show');
+  }
+  }
+  }
+  }
+  
+  
+  
+  
+  const plus = document.querySelector(".dropdown-content"),
+  
+  num = document.querySelector(".num");
+  let a = 0;
+  plus.addEventListener("click", ()=>{
+  a++ ;
+  a = (a < 1) ? "0" + a : a;
+  num.innerText = a;
+  });
+  
+  </script>
+  
+  
+     
+  
+  
+  
+  

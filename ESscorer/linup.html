@@ -1,0 +1,316 @@
+<style type="text/css">body {
+	margin:  auto;
+	background: #34495e;
+	font-family: "Open Sans", sans-serif;
+	cursor: default;
+}
+
+main {
+	padding: px px;
+}
+
+.pitch {
+	background: #26A65B;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	padding: 5px;
+	margin:  ;
+	display: inline-block;
+}
+
+.pitch h4 {
+	position: absolute;
+	color: #eee;
+	text-align: center;
+	margin: -40px 15px;
+}
+
+.pitch .container {
+	width: 350px;
+	height: 465px;
+	border: 2px solid #eee;
+}
+
+.pitch .half {
+	margin: 200px 0 0  -2px;
+	width: 350px;
+	height:0px;
+	border: 1px solid #eee;
+}
+
+.pitch .half:before {
+	position: absolute;
+	margin: -63px 115px;
+	width: 120px;
+	height: 120px;
+	border-radius: 60px;
+	border: 2px solid #eee;
+	content: "";
+}
+
+.pitch .box1 {
+	position: absolute;
+	margin: -2px 114px;
+	width: 120px;
+	height: 60px;
+	border: 2px solid #eee;
+}
+
+.pitch .pen1 {
+	position: absolute;
+	margin: -2px 21px;
+	width: 75px;
+	height: 35px;
+	border: 2px solid #eee;
+}
+
+.pitch .box2 {
+	position: absolute;
+	margin: 385px 114px;
+	width: 120px;
+	height: 60px;
+	border: 2px solid #eee;
+}
+
+.pitch .pen2 {
+	position: absolute;
+	margin: 20px 21px;
+	width: 75px;
+	height: 35px;
+	border: 2px solid #eee;
+}
+
+
+
+p {
+	width: 35px;
+	height: 455px;
+	background: rgba(0, 0, 0, .6);
+	margin: 13px 16px;
+	border-radius: 5px;
+	padding: 20px;
+	display: inline-block;
+}
+
+p:after {
+	content: '';
+	position: absolute;
+	top: 87%;
+	margin: 0 0 0 160px;
+	width: 0;
+	height: 0;
+	opacity: 0.6;
+	border-bottom: solid 10px #000;
+	border-left: solid 20px transparent;
+	border-right: solid 20px transparent;
+	
+	
+	{
+	box-sizing: border-box;
+	border: 0;
+	margin: ;
+	padding: ;
+	outline: ;
+	user-select: none;
+	}
+	
+.div{
+	position: absolute;
+	width: 30px;
+	height: 20px;
+	padding: 1px 1px 1px;
+	border-radius: 3px;
+	box-shadow: 1px ;
+	cursor: ;
+	}
+	div:active {
+	cursor: ;
+	}
+	div:not(:hover) > b {
+	display: none;
+	}
+	div > b {
+	color: ;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	line-height: 1px;
+	font-size: 1px;
+	padding: 3px;
+	}
+	div > textarea {
+	color: ;
+	font: italic bold larger cursive;
+	background: none;
+	resize: none;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	}
+
+	
+	
+}</style>
+
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	
+	<main>
+		<div class="pitch">
+			
+			<div class="container">
+				<div class="box1">
+					<div class="pen1">
+							</div>
+				</div>
+				<hr>
+				<div class="half"></div>
+				<div class="box2">
+					<div class="pen2"></div>
+				</div>
+			</div>
+		</div>
+		</mbr>
+
+		<hr>
+		
+	
+
+
+<style type="text/css">
+* {
+	box-sizing: border-box;
+	border: 0;
+	margin: ;
+	padding: ;
+	outline: ;
+	user-select: none;
+}
+
+div {
+
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	padding: 1px 1px 1px;
+	border-radius: 3px;
+	box-shadow: 1px ;
+	cursor: ;
+	;
+}
+div:active {
+	cursor: ;
+}
+div:not(:hover) > b {
+	display: none;
+}
+div > b {
+	color: ;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	line-height: 1px;
+	font-size: 1px;
+	padding: 3px;
+}
+div > textarea {
+	color: ;
+	font: italic bold larger cursive;
+	background: none;
+	resize: none;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+#new {
+	position: absolute;
+	bottom:0;
+	background: purple;
+	font-size: 50px;
+	line-height: 50px;
+	width: 50px;
+	left: 35px;
+	bottom: 35px;
+	border-radius: 50%;
+	color: #fff;
+	cursor: pointer;
+	box-shadow: inset 0 0 10px #000;
+	filter: drop-shadow(0 0 5px #000);
+	z-index: 99999;
+}
+#new:active {
+	filter: drop-shadow(0 0 3px #000);
+	transform: scale(.95);
+}
+
+
+</style>
+
+
+
+
+<div4>
+<button id="new">+</button></div4>
+
+
+<script type="text/javascript">const color = ['black','red'],
+mobile = /Android|BB|Pad|Phone/.test(navigator.userAgent),
+drag = e => {
+	const div = e.target.closest('div'),
+	ex = e.clientX - div.offsetLeft,
+	ey = e.clientY - div.offsetTop,
+	zDiv = div.style.zIndex
+	div.style.zIndex = document.querySelectorAll('div').length
+	document[`on${mobile ? 'touchend' : 'pointerup'}`] = ({}) => {
+		document[`on${type}`] = null
+		document[`on${type.replace(/end|up/,'move')}`] = null
+		document.querySelectorAll('div').forEach(e => {
+			if(Number(e.style.zIndex) > Number(zDiv))
+				e.style.zIndex = e.style.zIndex - 1
+		})
+	}
+	document[`on${mobile ? 'touch' : 'pointer'}move`] = m => {
+		if(mobile) m = m.touches[0]
+		div.style.left = `${m.clientX - ex}px`
+		div.style.top = `${m.clientY - ey}px`
+	}
+},
+create = (txt, top, left) => {
+	const [b, div, textarea] = ['b', 'div', 'textarea']
+		.map(e => document.createElement(e)),
+	num = document.querySelectorAll('div').length
+	div.style.background = color[num % color.length]
+	b.innerText = '✖'
+	b.onclick = ({ target: t }) => {
+		t.closest('div')?.remove()
+	}
+	textarea.value = txt || ''
+	div.ondblclick = () => {
+		textarea.style.pointerEvents = 'initial'
+		textarea.select()
+	}
+	textarea.onblur = () => {
+		textarea.style.pointerEvents = ''
+	}
+	div.append(b, textarea)
+	div.onpointerdown = drag
+	div.style.zIndex = num
+	top
+		? div.style.top = top + 'px'
+		: div.style.bottom = 50 + 'px'
+	left
+		? div.style.left = left + 'px'
+		: div.style.right = 50 + 'px'
+	document.body.append(div)
+}
+[].forEach(
+	(t, i) => create(t, 50*(i+1)-20, 30*(i+1))
+)
+document.querySelector('#new').onclick = () => create()</script>

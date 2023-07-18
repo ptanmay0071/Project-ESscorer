@@ -1,0 +1,81 @@
+
+<style type="text/css">div{border:1px solid;width:200px;height:200px; float:left;}
+#d1{border-color:red;}
+#d2{border-color:blue;}</style>
+
+<button id="button__1"  value="1" >1</button>
+ 
+
+<button id="d2">
+</button>
+                  <script type="text/javascript">(function(){
+                  var button__1 = document.getElementById("button__1"),
+                  d2 = document.getElementById("d2"),
+                  tmp;
+                  
+                  button__1.onmousedown = function(){
+                  tmp = Number(this.innerHTML);
+                  };
+                  
+                  d2.onmousedown = function(){
+                  var v = (Number(this.innerHTML) || 0) +(tmp || 0);
+                  
+                  v && (this.innerHTML = v);
+                  }
+                  
+                  })();</script>
+                  
+                  
+                  <script type="text/javascript">var tmp=0;
+                  
+                  function chip_amnt(o){
+                  tmp = Number(o.innerText);
+                  }
+                  
+                  function chip_provide(o){
+                  var value = (Number(o.innerHTML) || 0) + (tmp || 0);
+                  
+                  value && (o.innerHTML = value);
+                  
+                  }</script>
+                  
+                  <ul>
+                  <li class="active">
+                  <a href="#" onclick="chip_amnt(this)">
+                  <img src="chip.jpg" alt="">
+                  <span>250</span>
+                  </a>
+                  </li>
+                  
+                  <li class="active">
+                  <a href="#" onclick="chip_amnt(this)">
+                  <img src="{{image_url}}" alt="">
+                  <span>500</span>
+                  </a>
+                  </li>
+                  <li class="active">
+                  <a href="#"  onclick="chip_amnt(this)">
+                  <img src="{{image_url}}" alt="">
+                  <span>100</span>
+                  </a>
+                  </li>
+                  </ul>
+                  to here:
+                  <ul>
+                  <li class="" onclick="chip_provide(this)">
+                  Player Pair
+                  </li>
+                  <li class=""  onclick="chip_provide(this)">
+                  Tie
+                  </li>
+                  <li class=""  onclick="chip_provide(this)">
+                  Banker Pair
+                  </li>
+                  <li class=""  onclick="chip_provide(this)">
+                  Player
+                  </li>
+                  <li class=""  onclick="chip_provide(this)">
+                  Banker
+                  </li>
+                  </ul>
+                  

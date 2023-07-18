@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wrigley Scoreboard - HTML + CSS + JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="./src/styles.css" />
+    <meta charset="UTF-8" />
+  </head>
+<style type="text/css">/* Table */
+.btn3
+{border-radius:20px;
+width:50px;
+height:50px;
+background-color: blue;
+font-color:white;
+font-family: 'Orbitron', sans-serif;
+  background-color:skyblue;
+  color: white;
+  border: solid black 0.5px;
+  width: 35%;
+  border-radius: 10px;
+  height: 50px;
+  outline: black;
+  margin:5px;
+  text-align:center;
+}
+.btn{
+border-radius:20px;
+width:50px;
+height:50px;
+background-color:purple;
+font-color:white;
+font-family: 'Orbitron', sans-serif;
+  background-color: #64278f;
+  color: white;
+  border: solid black 0.5px;
+  width: 35%;
+  border-radius: 10px;
+  height: 50px;
+  outline: black;
+  margin:5px;
+  text-align:center;
+}
+body {
+
+  font: normal 1em "Arial";
+}
+
+.App {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+table {
+  font: bold 2em "Arial Narrow";
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.7;
+  padding: 8px;
+  margin: 32px auto;
+  border-spacing: 8px;
+  border: 1px solid #000;
+  background-color: grey;
+  color: #ffffff;
+}
+
+.team td {
+  padding: 4px;
+  min-width: 32px;
+  box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.team td:first-child {
+  text-align: left;
+  padding-right: 32px;
+}
+
+.current-inning {
+  color: #efb244;
+}
+
+/* Controls */
+
+.controls {
+  text-align: center;
+}
+
+button {
+  font: bold 1em "Arial";
+  padding: 8px 16px;
+  margin: 4px;
+}
+.abc{text-align: center;
+top:1px;}
+</style>
+
+  <body>
+  <h1 class="abc">Table Tennis</h1>
+  <hr>
+    <div class="App">
+     <table>
+        <tr class="team away">
+        <td  id="printHello"></td>
+          <td class="name">Away</td>
+          <td class="inning current-inning"></td>
+          <td class="inning"></td>
+          <td class="inning"></td>
+          <td class="total">0</td>
+        </tr>
+        <tr class="team home">
+        <td  id="print"></td>
+        
+          <td class="name">Home</td>
+          <td class="inning current-inning"></td>
+          <td class="inning"></td>
+          <td class="inning"></td>
+          <td class="total">0</td>
+        </tr>
+        <tr class="innings">
+          <td></td>
+          <td></td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td></td>
+        </tr>
+      </table>
+
+      <div class="controls">
+        <td><button class="btn" id="away-score">Player 1</button></td>
+       <td> <button class="btn" id="home-score">Player 2</button></td>
+        <td><button class="btn"id="end-inning">End Inning</button></td>
+      </div>
+    </div>
+    
+   
+<h2 id="print"></h2>
+   <input type="Your Name" name="name" id="name" value="">
+   <button class="btn3" type="button" name="button" onclick="printname()">Player 1</button>
+   
+   <label>  </label>
+   <input type="Your Name" name="name1" id="name1" value="">
+   <button class="btn3" type="button" name="button" onclick="printname1()">Player 2</button>
+   
+   
+   
+   <script>function printname(){
+   var giveName = document.getElementById("name").value;
+   document.getElementById("printHello").innerHTML =  giveName;
+   }</script>
+   
+   
+   <script>function printname1(){
+   var giveName = document.getElementById("name1").value;
+   document.getElementById("print").innerHTML =  giveName;
+   }</script>
+   
+   
+  
+    <script>// query our HTML elements using their ids / class names
+    const endInningButton = document.querySelector("#end-inning");
+    const awayScoreButton = document.querySelector("#away-score");
+    const homeScoreButton = document.querySelector("#home-score");
+    
+    // Create an object to hold the state of our game
+    const state = {
+    inning: 0,
+    totalInnings: 3,
+    teams: {
+    home: {
+     
+    innings: [0],
+    total: 0
+    },
+    away: {
+    
+    innings: [0],
+    total: 0
+    }
+    }
+    };
+    
+    // Create an object to store different element queries
+    const elements = {
+    teams: {
+    home: {
+    name: document.querySelector(".home .name"),
+    innings: document.querySelectorAll(".home .inning"),
+    total: document.querySelector(".home .total")
+    },
+    away: {
+    name: document.querySelector(".away .name"),
+    innings: document.querySelectorAll(".away .inning"),
+    total: document.querySelector(".away .total")
+    }
+    }
+    };
+    
+    // Set team names on load
+    elements.teams.home.name.textContent = state.teams.home.name;
+    elements.teams.away.name.textContent = state.teams.away.name;
+    
+    // Create a function to run when a team scores
+    function handleScore(teamName) {
+    const { inning, teams } = state;
+    const team = teams[teamName];
+    
+    // update state
+    team.innings[inning]+=1;
+    team.total+=1;
+    
+    // update elements
+    const teamElements = elements.teams[teamName];
+    
+    const inningElement = teamElements.innings[inning];
+    inningElement.textContent = team.innings[inning];
+    
+    const totalElement = teamElements.total;
+    totalElement.textContent = team.total;
+    }
+    
+    // Create a function to run when we finish an inning
+    function handleEndOfInning() {
+    if (state.inning > state.totalInnings - 1) {
+    return;
+    } else if (state.inning === state.totalInnings - 1) {
+    endInningButton.disabled = true;
+    awayScoreButton.disabled = true;
+    homeScoreButton.disabled = true;
+    }
+    
+    const { teams, inning, totalInnings } = state;
+    
+    // update the HTML elements for both teams
+    for (let teamName of ["home", "away"]) {
+    const team = teams[teamName];
+    
+    // update state
+    team.innings.push(0);
+    
+    // update elements
+    const teamElements = elements.teams[teamName];
+    
+    // update the current (stale) inning element
+    const currentInning = teamElements.innings[inning];
+    currentInning.classList.toggle("current-inning");
+    
+    if (!team.innings[inning]) {
+    currentInning.textContent = "0";
+    }
+    
+    // If we're out of innings, stop here
+    if (inning >= totalInnings - 1) {
+    continue;
+    } else {
+    // Update the new inning element
+    const nextInning = teamElements.innings[state.inning + 1];
+    nextInning.classList.toggle("current-inning");
+    }
+    }
+    // Increment the inning
+    state.inning++;
+    }
+    
+    // connect our functions to our HTML button elements
+    endInningButton.onclick = handleEndOfInning;
+    
+    awayScoreButton.onclick = function() {
+    handleScore("away");
+    };
+    homeScoreButton.onclick = function() {
+    handleScore("home");
+    };
+    </script>
+  </body>
+</html>
